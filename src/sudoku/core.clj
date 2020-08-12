@@ -130,5 +130,4 @@
 
 ;delete some functions
 
-;"solve conflicts"
-
+;"solved conflicts"
