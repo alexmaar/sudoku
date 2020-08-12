@@ -124,3 +124,6 @@
       (for [value valid-values
             solution (solve-board (set-value-at board empty-field value))]
         solution))))
+
+(defn additional-function []
+  (println "Working with git branches and command"))
