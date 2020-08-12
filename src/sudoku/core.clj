@@ -106,3 +106,4 @@
 
 ;modyfing board
 
+"solve conflicts"
