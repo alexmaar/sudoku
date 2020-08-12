@@ -127,3 +127,5 @@
 
 (defn additional-function []
   (println "Working with git branches and command"))
+
+;delete some functions
