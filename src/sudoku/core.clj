@@ -106,21 +106,3 @@
 
 ;modyfing board
 
-(defn set-value-at [board [row col] new-value]
-  (assoc-in board [row col] new-value))
-
-(defn find-empty-point [board]
-  (if (filled? board)
-    nil
-    [(.indexOf board (first (filter #(some (fn [x] (= x 0)) %) board))) (.indexOf (first (filter #(some (fn [x] (= x 0)) %) board)) 0)]))
-
-(defn solve-board [board]
-  (if (filled? board)
-    (if (valid-solution? board)
-      [board]
-      '())
-    (let [empty-field (find-empty-point board)
-          valid-values (valid-values-for board empty-field)]
-      (for [value valid-values
-            solution (solve-board (set-value-at board empty-field value))]
-        solution))))
